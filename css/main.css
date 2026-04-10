@@ -295,8 +295,7 @@ iframe {
 .symbol-btn-back-to-top {
   font-size: 22px;
   color: white;
-  line-height: 1em;
-	padding:15px 10px;
+  padding:10px 13px;
 }
 
 .btn-back-to-top:hover {
