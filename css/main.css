@@ -275,7 +275,6 @@ iframe {
 ///////////////////////////////////////////////////////////
 */
 .btn-back-to-top {
-  display: none;
   position: fixed;
   width: 40px;
   height: 40px;
@@ -297,6 +296,7 @@ iframe {
   font-size: 22px;
   color: white;
   line-height: 1em;
+	padding:15px 10px;
 }
 
 .btn-back-to-top:hover {
