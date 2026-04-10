@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="dash-logo">
+                        <a href="index.html">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                        </a>
+                    </div>
+  <ul>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="book-event.html">Book Event</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery-dash.html">Gallery</a></li>
+  <li><a href="my-bookings.html">My Bookings</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="topbar">
+  <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+  <h2>Client Dashboard</h2>
+</div>
+
+<div class="content">
+
+  <div class="cards">
+    <div class="card">
+      <h3>Book a Picnic</h3>
+      <p>Select themes, menu & customize.</p>
+    </div>
+
+    <div class="card">
+      <h3>Special Requests</h3>
+      <p>Add decorations, music, or surprises.</p>
+    </div>
+
+    <div class="card">
+      <h3>Manage Events</h3>
+      <p>Track and edit your bookings easily.</p>
+    </div>
+  </div>
+  <div class="stats">
+  <div class="stat-card">Total Bookings</div>
+  <div class="stat-card">Pending Events</div>
+  <div class="stat-card">Completed</div>
+  <div class="stat-card">Revenue</div>
+</div>
+<section class="upcoming">
+  <h2>Upcoming Events</h2>
+  <div class="event-card">Romantic Setup - 25 Apr</div>
+</section>
+<section class="activity">
+  <h2>Recent Activity</h2>
+  <ul>
+    <li>Booking confirmed</li>
+    <li>Payment received</li>
+  </ul>
+</section>
+<div class="quick-actions">
+  <button>Book Now</button>
+  <button>View Packages</button>
+  <button>Contact Support</button>
+</div>
+
+  <div class="gallery">
+    <img src="images/dinner-01.jpg">
+    <img src="images/dinner-02.jpg">
+    <img src="images/dinner-03.jpg">
+  </div>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+document.getElementById('overlay').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.remove('active');
+  this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>

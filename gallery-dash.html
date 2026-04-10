@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="dash-logo">
+                        <a href="index.html">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                        </a>
+                    </div>
+  <ul>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="book-event.html">Book Event</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery-dash.html">Gallery</a></li>
+  <li><a href="my-bookings.html">My Bookings</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="topbar">
+  <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+  <h2>Client Dashboard</h2>
+</div>
+
+<div class="content">
+
+  <section class="gallery-section">
+  <div class="container">
+
+    <h2>Our Gallery</h2>
+    <p>Explore our beautiful picnic setups & experiences</p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="images/photo-gallery-17.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/photo-gallery-16.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/photo-gallery-15.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/photo-gallery-14.jpg">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/photo-gallery-13.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo-gallery-01.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo-gallery-03.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo-gallery-04.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo-gallery-05.jpg">
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo-gallery-06.jpg">
+      </div>
+
+     
+
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+document.getElementById('overlay').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.remove('active');
+  this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>

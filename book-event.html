@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="dash-logo">
+                        <a href="index.html">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                        </a>
+                    </div>
+  <ul>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="book-event.html">Book Event</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery-dash.html">Gallery</a></li>
+  <li><a href="my-bookings.html">My Bookings</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="topbar">
+  <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+  <h2>Client Dashboard</h2>
+</div>
+
+<div class="content">
+
+  <section class="book-event">
+  <div class="container">
+    
+    <h2>Book Your Experience</h2>
+    <p>Create your perfect luxury picnic with custom themes & menu.</p>
+
+    <form class="event-form">
+
+      <!-- Theme Selection -->
+      <div class="form-group">
+        <label>Select Theme</label>
+        <select>
+          <option>Romantic Setup</option>
+          <option>Birthday Celebration</option>
+          <option>Friends Hangout</option>
+          <option>Luxury Dining</option>
+        </select>
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label>Select Date</label>
+        <input type="date">
+      </div>
+
+      <!-- Guests -->
+      <div class="form-group">
+        <label>Number of Guests</label>
+        <input type="number" placeholder="Enter guests">
+      </div>
+
+      <!-- Menu -->
+      <div class="form-group">
+        <label>Select Menu</label>
+        <select>
+          <option>Veg Premium</option>
+          <option>Non-Veg Deluxe</option>
+          <option>Custom Menu</option>
+        </select>
+      </div>
+
+      <!-- Special Requests -->
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea placeholder="Decorations, cake, music..."></textarea>
+      </div>
+
+      <button type="submit">Book Now</button>
+
+    </form>
+  </div>
+</section>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+document.getElementById('overlay').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.remove('active');
+  this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="dash-logo">
+                        <a href="index.html">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                        </a>
+                    </div>
+  <ul>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="book-event.html">Book Event</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery-dash.html">Gallery</a></li>
+  <li><a href="my-bookings.html">My Bookings</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="topbar">
+  <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+  <h2>Client Dashboard</h2>
+</div>
+
+<div class="content">
+
+ <section class="settings">
+  <div class="container">
+
+    <h2>Settings</h2>
+    <p>Manage your profile and preferences</p>
+
+    <div class="settings-grid">
+
+      <!-- Profile -->
+      <div class="settings-card">
+        <h3>Profile Info</h3>
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Phone</label>
+        <input type="text" placeholder="Enter phone number">
+
+        <button>Update Profile</button>
+      </div>
+
+      <!-- Preferences -->
+      <div class="settings-card">
+  <h3>Preferences</h3>
+
+  <label>Theme Style</label>
+  <select>
+    <option>Luxury</option>
+    <option>Dark</option>
+    <option>Light</option>
+  </select>
+
+  <label>Default Package</label>
+  <select>
+    <option>Romantic Setup</option>
+    <option>Birthday Special</option>
+    <option>Luxury Dining</option>
+  </select>
+
+  <!-- EXTRA 1 -->
+  <label>Language</label>
+  <select>
+    <option>English</option>
+    <option>Tamil</option>
+  </select>
+
+  
+
+  <button>Save Preferences</button>
+</div>
+
+      <!-- Security -->
+      <div class="settings-card">
+        <h3>Security</h3>
+
+        <label>Old Password</label>
+        <input type="password" placeholder="Old password">
+
+        <label>New Password</label>
+        <input type="password" placeholder="New password">
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password">
+
+        <button>Change Password</button>
+      </div>
+
+      <!-- Notifications -->
+      <div class="settings-card notif-sec">
+  <h3>Notifications</h3>
+
+  <label>
+    <input type="checkbox">
+    Email Updates
+  </label>
+
+  <label>
+    <input type="checkbox">
+    SMS Alerts
+  </label>
+
+  <label>
+    <input type="checkbox">
+    Booking Reminders
+  </label>
+
+  <!-- EXTRA 4 ADDED -->
+
+  <label>
+    <input type="checkbox">
+    WhatsApp Notifications
+  </label>
+
+  <label>
+    <input type="checkbox">
+    New Package Alerts
+  </label>
+
+  <label>
+    <input type="checkbox">
+    Payment Confirmation
+  </label>
+
+  <label>
+    <input type="checkbox">
+    Event Status Updates
+  </label>
+
+  <button>Save Settings</button>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+document.getElementById('overlay').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.remove('active');
+  this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>

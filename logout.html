@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<style type="text/css">
+    .logout-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 90%;
+  max-width: 400px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+  <div class="dash-logo">
+                        <a href="index.html">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                        </a>
+                    </div>
+  <ul>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="book-event.html">Book Event</a></li>
+  <li><a href="packages.html">Packages</a></li>
+  <li><a href="gallery-dash.html">Gallery</a></li>
+  <li><a href="my-bookings.html">My Bookings</a></li>
+  <li><a href="settings.html">Settings</a></li>
+  <li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="topbar">
+  <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+  <h2>Client Dashboard</h2>
+</div>
+
+<div class="content">
+
+<div class="logout-box">
+  <h2>Logout Confirmation</h2>
+  <p>Are you sure you want to logout?</p>
+
+ <button class="logout-btn" onclick="location.href='login.html'">
+  Yes, Logout
+</button>
+
+<button class="cancel-btn" onclick="location.href='dashboard.html'">
+  Cancel
+</button>
+</div>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+document.getElementById('overlay').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.remove('active');
+  this.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
