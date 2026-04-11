@@ -2649,3 +2649,6 @@ filter: brightness(0) invert(1);
 .dark .label-gallery.is-actived {
   background: #d61c22;
 }
+.dark .info-reservation span {
+  color: #fff;
+}
