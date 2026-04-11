@@ -2605,3 +2605,21 @@ margin-left: 18px;
 .content-video.t-center.p-t-225.p-b-250 {
   padding: 100px 0px !important;
 }
+.contact-box
+{
+	background: #fff;
+  padding: 40px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  height: 100%;
+}
+.dark .contact-box
+{
+	background: #fff;
+  padding: 40px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  height: 100%;
+}
