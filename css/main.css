@@ -2637,3 +2637,9 @@ filter: brightness(0) invert(1);
 .dark .picnic-outline-btn {
   border: 2px solid #d61c22;
 }
+.dark .blog-content .read-more:hover {
+  color: #fff !important;
+}
+.dark .blog-content .read-more {
+  color: #d61c22 !important;
+}
