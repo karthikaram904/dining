@@ -2631,3 +2631,6 @@ margin-left: 18px;
 {
 filter: brightness(0) invert(1);
 }
+.dark .btn3 {
+  background: #d61c22;
+}
