@@ -2643,3 +2643,9 @@ filter: brightness(0) invert(1);
 .dark .blog-content .read-more {
   color: #d61c22 !important;
 }
+.dark .label-gallery {
+  color: #fff;
+}
+.dark .label-gallery.is-actived {
+  background: #d61c22;
+}
