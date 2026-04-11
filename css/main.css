@@ -2652,3 +2652,6 @@ filter: brightness(0) invert(1);
 .dark .info-reservation span {
   color: #fff;
 }
+.wrap-menu-header {
+  border: none;
+}
