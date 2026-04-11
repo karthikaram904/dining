@@ -958,6 +958,9 @@ input[type="date" i] {
 	.event-grid,.blog-grid {
   grid-template-columns: repeat(1, 1fr);
 }
+	.footer .logo {
+  margin-bottom: 50px;
+}
   .sidebar2 {
   margin-top: 30px;
 }
@@ -2598,10 +2601,7 @@ margin-left: 18px;
    background: #000 !important;
  padding: 30px !important;
 }
-.footer .logo {
-  margin-top: -6px;
-  margin-bottom: 50px;
-}
+
 .content-video.t-center.p-t-225.p-b-250 {
   padding: 100px 0px !important;
 }
