@@ -2595,3 +2595,7 @@ margin-left: 18px;
    background: #000 !important;
  padding: 30px !important;
 }
+.footer .logo {
+  margin-top: -6px;
+  margin-bottom: 50px;
+}
