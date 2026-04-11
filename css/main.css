@@ -2634,3 +2634,6 @@ filter: brightness(0) invert(1);
 .dark .btn3 {
   background: #d61c22;
 }
+.dark .picnic-outline-btn {
+  border: 2px solid #d61c22;
+}
