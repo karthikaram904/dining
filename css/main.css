@@ -1435,12 +1435,13 @@ body {padding-right: 0px !important;}
 */
 .bg-title-page {
   width: 100%;
-  min-height: 545px;
+  min-height: 345px;
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
+	padding:0px !important;
 }
 
 @media (max-width: 576px) {
