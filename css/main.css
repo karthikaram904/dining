@@ -2616,10 +2616,18 @@ margin-left: 18px;
 }
 .dark .contact-box
 {
-	background: #fff;
+	background: #000;
   padding: 40px 25px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: 0.3s;
   height: 100%;
+}
+.dark .contact-box span
+{
+	color:#fff;
+}
+.dark .contact-box img
+{
+filter: brightness(0) invert(1);
 }
