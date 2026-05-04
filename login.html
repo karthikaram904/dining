@@ -17,49 +17,73 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family: Courgette;
-     background:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#111;
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    transition:background .3s, color .3s;
 }
+
+body.dark {
+    background:#000;
+    color:#fff;
+}
+
 .title-section-ourmenu.t-center.m-b-22 h3 {
   font-size: 23px !important;
+  font-family:'Poppins',sans-serif;
 }
 
 
-/* LOGIN BOX */
+/* AUTH BOX */
 .login-box{
     width:100%;
-    max-width:400px;
+    max-width:420px;
     background:#fff;
     padding:40px 30px;
     border-radius:12px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:background .3s, color .3s, box-shadow .3s;
+}
+
+body.dark .login-box {
+    background:#111;
+    color:#f5f5f5;
+    box-shadow:0 10px 25px rgba(255,255,255,0.06);
 }
 
 /* LOGO */
-.login-logo img{
+.dark .login-logo img{
     width:120px;
     margin-bottom:20px;
+    filter: none;
+}
+.login-logo img {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(96%) saturate(2877%) hue-rotate(345deg) brightness(95%);
 }
 
 /* TITLE */
 .login-box p{
     margin-bottom:20px;
+    color:inherit;
 }
 .login-box h2
 {
-    
-    font-weight: 700;
-  line-height: 1.2;
-  font-size: 35px;
-  margin-bottom: 10px;
+    font-weight:700;
+    line-height:1.2;
+    font-size:35px;
+    margin-bottom:10px;
+    color:inherit;
 }
 
 /* INPUT */
@@ -71,6 +95,18 @@ body{
     border-radius:6px;
     outline:none;
     font-size:15px;
+    background:#fff;
+    color:#111;
+}
+
+body.dark .login-box input{
+    background:#181818;
+    border-color:#333;
+    color:#f5f5f5;
+}
+
+body.dark .login-box input::placeholder{
+    color:#aaa;
 }
 
 /* PASSWORD WRAP */
@@ -87,6 +123,10 @@ body{
     color:#888;
 }
 
+body.dark .password-box i{
+    color:#ccc;
+}
+
 /* REMEMBER + FORGOT */
 .form-options{
     display:flex;
@@ -96,7 +136,7 @@ body{
 }
 
 .form-options label{
-     display:flex;
+    display:flex;
     align-items:center;
     gap:8px;
     white-space:nowrap;
@@ -105,6 +145,10 @@ body{
 .form-options a{
     text-decoration:none;
     color:#d61c22;
+}
+
+body.dark .form-options a{
+    color:#f5f5f5;
 }
 
 /* BUTTON */
@@ -120,12 +164,12 @@ body{
     transition:.3s;
 }
 .form-options input[type="checkbox"]
-    {
+{
     width:16px;
     height:16px;
     cursor:pointer;
-    margin: 0px;
-    }
+    margin:0;
+}
 
 .login-box button:hover{
     background:#000;
@@ -141,11 +185,14 @@ body{
     color:#777;
 }
 
+body.dark .social-login p{
+    color:#ccc;
+}
+
 .social-icons{
     display:flex;
     justify-content:center;
     gap:12px;
-
 }
 
 .social-btn{
@@ -156,38 +203,28 @@ body{
     justify-content:center;
     border-radius:8px;
     color:#fff;
-    text-decoration: none;
+    text-decoration:none;
+    background:#111;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:transform .3s, background .3s, border-color .3s;
 }
 
-/* COLORS */
-.facebook{background:#1877f2;}
-.google{background:#db4437;}
-.twitter{background:#1da1f2;}
-.apple{background:#000;}
-
-/* HOVER */
-.facebook:hover{
-    background:#fff;
-    color:#1877f2;
-    transform:scale(1.1);
+.social-btn i{
+    font-size:1.2rem;
 }
 
-.google:hover{
-    background:#fff;
-    color:#db4437;
-    transform:scale(1.1);
+.social-btn:hover{
+    background:#d61c22;
+    border-color:#d61c22;
+    transform:translateY(-2px);
 }
 
-.twitter:hover{
-    background:#fff;
-    color:#1da1f2;
-    transform:scale(1.1);
-}
-
-.apple:hover{
-    background:#fff;
-    color:#000;
-    transform:scale(1.1);
+.facebook,
+.google,
+.twitter,
+.apple{
+    background:inherit;
+    color:inherit;
 }
 
 /* REGISTER */
@@ -200,6 +237,14 @@ body{
     text-decoration:none;
 }
 
+body.dark .register-link a{
+    color:#f5f5f5;
+}
+
+body.dark .tit2, body.dark .tit3 {
+    color: #fff !important;
+}
+
 /* MOBILE */
 @media(max-width:480px){
     .login-box{
@@ -208,16 +253,46 @@ body{
     }
 }
 
+/* Floating theme btn */
+.auth-theme-btn{
+    position:fixed;
+    top:16px;
+    right:16px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,0.7);
+    background:transparent;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all 0.3s ease;
+    z-index:999;
+}
+.auth-theme-btn:hover{
+    background:#d61c22;
+    border-color:#d61c22;
+}
+body:not(.dark) .auth-theme-btn{
+    border-color:rgba(17,17,17,0.4);
+    color:#111;
+}
+
 </style>
 </head>
 
 <body>
 
+<button class="auth-theme-btn" id="auth-theme-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+
 <div class="login-box">
 
     <div class="login-logo">
                         <a href="index.html">
-                            <img src="images/icons/favicon.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-logo.png">
+                            <img src="images/icons/signature-white.png" alt="IMG-LOGO" data-logofixed="images/icons/signature-white.png">
                         </a>
                     </div>
 
@@ -281,15 +356,31 @@ body{
 
 </div>
 
-<!-- PASSWORD TOGGLE SCRIPT -->
 <script>
+// Apply immediately to prevent flash
+(function(){ if(localStorage.getItem('theme')!=='light') document.body.classList.add('dark'); })();
+
+function setAuthTheme(theme){
+    const btn = document.getElementById('auth-theme-btn');
+    if(theme === 'dark'){
+        document.body.classList.add('dark');
+        btn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark');
+        btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+    localStorage.setItem('theme', theme);
+}
+document.getElementById('auth-theme-btn').addEventListener('click', function(){
+    setAuthTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
+});
+setAuthTheme(localStorage.getItem('theme') ?? 'dark');
+
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#password');
-
 togglePassword.addEventListener('click', function () {
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
-
     this.classList.toggle('fa-eye-slash');
 });
 </script>

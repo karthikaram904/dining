@@ -232,9 +232,9 @@ document.addEventListener("click", function(e) {
   }
 });
 
-// Load Theme
+// Load Theme — dark is the default; respect saved preference if set
 window.addEventListener("load", () => {
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") ?? "dark";
   setTheme(savedTheme);
 });
 

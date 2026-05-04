@@ -1,9 +1,9 @@
 /*------------------------------------------------------------------
-Project:  Pato
-Version:  
-Last change:  
-Assigned to:  Kevin Nguyen
-Primary use:  Company
+Project:  Signature Outdoor Dining
+Version:  1.0
+Last change:  2026
+Assigned to:  Signature Outdoor Dining
+Primary use:  Restaurant / Dining Website
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [LAYOUT]
@@ -958,8 +958,8 @@ input[type="date" i] {
 	.event-grid,.blog-grid {
   grid-template-columns: repeat(1, 1fr);
 }
-	.footer .logo {
-  margin-bottom: 50px;
+	.footer-logo {
+  margin-bottom: 20px;
 }
   .sidebar2 {
   margin-top: 30px;
@@ -1011,7 +1011,7 @@ input[type="date" i] {
 ///////////////////////////////////////////////////////////
 */
 .btn3 {
-  background: #111111;
+  background: #111;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -1509,12 +1509,12 @@ body {padding-right: 0px !important;}
 }
 
 .label-gallery:hover {
-  background-color: #111111;
+  background-color: #111;
   color: white;
 }
 
 .is-actived {
-  background-color: #111111;
+  background-color: #111;
   color: white;
 }
 
@@ -1620,11 +1620,6 @@ body {padding-right: 0px !important;}
   -o-box-shadow: 0 0 0px 1px #333333;
   -ms-box-shadow: 0 0 0px 1px #333333;
 
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
 }
 
 .btn-search-sidebar2:hover {
@@ -2360,8 +2355,60 @@ body {
 
 /* Dark theme */
 body.dark {
-  background: #0b1220;
+  background: #000000;
   color: #ffffff;
+}
+
+/* Dark mode for all card/box sections */
+body.dark .why-choose-section .card,
+body.dark .package-card,
+body.dark .blog-card,
+body.dark .why-card,
+body.dark .contact-box,
+body.dark .booking-form,
+body.dark .wrap-form-reservation,
+body.dark .wrap-form-booking,
+body.dark .section-contact form,
+body.dark .section-signup.bg1-pattern,
+body.dark .card,
+body.dark .card-body {
+  background: #111 !important;
+  border-color: #222 !important;
+}
+
+body.dark .why-choose-section .card .card-title,
+body.dark .why-choose-section .card .card-text,
+body.dark .package-card .card-title,
+body.dark .package-card .card-text,
+body.dark .blog-card .blog-content h4,
+body.dark .blog-card .blog-content p,
+body.dark .blog-card .read-more,
+body.dark .booking-form .form-label,
+body.dark .section-contact form label,
+body.dark .wrap-form-reservation label,
+body.dark .wrap-form-booking label {
+  color: #f5f5f5 !important;
+}
+
+body.dark .booking-form .form-control,
+body.dark .booking-form .form-select,
+body.dark .wrap-form-reservation input,
+body.dark .wrap-form-reservation textarea,
+body.dark .wrap-form-booking input,
+body.dark .wrap-form-booking textarea,
+body.dark .section-contact form input,
+body.dark .section-contact form textarea,
+body.dark .section-contact form select {
+  background: #181818 !important;
+  border-color: #333 !important;
+  color: #f5f5f5 !important;
+}
+
+body.dark .booking-form .form-control::placeholder,
+body.dark .booking-form .form-select option,
+body.dark .wrap-form-reservation input::placeholder,
+body.dark .wrap-form-booking input::placeholder {
+  color: #bbb !important;
 }
 
 /* Button color in dark */
@@ -2520,7 +2567,7 @@ body.dark .theme-btn {
 }
 .dark .picnic-welcome-banner,.dark .why-choose-section,.dark .section-ourmenu,.dark .booking-section,.dark .section-blog,.dark .section-welcome,.dark .content-intro,.dark .section-booking.bg1-pattern,.dark .bg2-pattern,.dark .section-mvv,.dark .section-why,.dark .section-chef,.dark .section-mainmenu,.dark .section-lunch,.dark .section-dinner,.dark .section-reservation,.dark .section-contact
 {
-  background: #0b1220 !important;
+  background: #000000 !important;
 }
 .dark .tit3,.dark p,.dark .tit1,.dark .tit4,.dark .tit5,.dark .txt5,.dark .txt1,.dark .txt2,.dark .txt3,.dark .txt4,.dark .picnic-outline-btn
 {
@@ -2528,7 +2575,7 @@ color:#fff !important;
 }
 .dark .card-body,.dark .section-signup.bg1-pattern,.dark .blog-content,.dark .wrap-text-blo2,.dark .mvv-card,.dark .why-card,.dark .text-blo5.size34
 {
-  background: #000;
+  background: #111;
 }
 .dark .btn2.txt5,.dark .btn1.txt3
 {
@@ -2550,7 +2597,7 @@ color: #fff;
   direction: initial;
 }
 .dark .wrap-form-booking {
-  background: #000;
+  background: #111;
   padding: 30px;
 }
 .rtl .pic-blo3.size20.bo-rad-10.hov-img-zoom {
@@ -2573,7 +2620,7 @@ margin-left: 18px;
    text-align: left;
 }
 .dark .section-contact form {
-  background: #000 !important;
+  background: #111 !important;
   padding: 30px;
 }
 .main_menu li a.active,.menu-sidebar li a.active
@@ -2590,16 +2637,43 @@ margin-left: 18px;
 .dark .gallery-sidebar{
   margin-top: 20px;
 }
-.footer .txt14 {
+..footer .txt14 {
   color: #fff;
 }
-.footer .logo {
-  margin-top: -6px;
-  margin-bottom: 13px;
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-logo a {
+  display: block;
+}
+
+.footer-logo img {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+.dark .wrap-form-booking {
+  background: #111 !important;
+  padding: 30px;
 }
 .dark .booking-form {
-   background: #000 !important;
- padding: 30px !important;
+  background: #111 !important;
+  padding: 30px !important;
+}
+
+/* Event cards & About box — dark mode */
+.dark .event-card .event-content {
+  background: #111 !important;
+  color: #f5f5f5;
+}
+.dark .event-card .event-content h4,
+.dark .event-card .event-content p {
+  color: #f5f5f5 !important;
+}
+.dark .about-section .border {
+  background: #111 !important;
+  border-color: #333 !important;
 }
 
 .content-video.t-center.p-t-225.p-b-250 {
@@ -2616,7 +2690,7 @@ margin-left: 18px;
 }
 .dark .contact-box
 {
-	background: #000;
+	background: #111;
   padding: 40px 25px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -2654,4 +2728,309 @@ filter: brightness(0) invert(1);
 }
 .wrap-menu-header {
   border: none;
+}
+
+/* RTL — Contact page */
+body.rtl .contact-box {
+  flex-direction: row-reverse;
+  margin-left: 0;
+  margin-right: 23px;
+}
+
+body.rtl .contact-box > div:first-child {
+  padding-right: 0 !important;
+  padding-left: 40px !important;
+}
+
+body.rtl .contact-box .flex-col-l {
+  text-align: right;
+  align-items: flex-end;
+}
+
+body.rtl .section-contact .txt9 {
+  display: block;
+  text-align: right;
+}
+
+body.rtl .wrap-form-reservation input,
+body.rtl .wrap-form-reservation textarea {
+  text-align: right;
+  direction: rtl;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body.rtl .wrap-btn-booking {
+  direction: ltr;
+}
+body.rtl  .contact-box .flex-col-l {
+  text-align: left;
+}
+body.rtl .contact-box > div:first-child {
+  padding-right: 40px !important;
+}
+/* Footer Quick Links */
+.footer-quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-quick-links li {
+  margin-bottom: 12px;
+}
+
+.footer-quick-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-quick-links li a:hover {
+  color: #d61c22;
+}
+
+.footer-quick-links li a i {
+  color: #d61c22;
+}
+
+/* Footer Newsletter */
+.footer-newsletter {
+  display: flex;
+  gap: 0;
+}
+
+.footer-newsletter-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 13px;
+  background: #2a2a2a;
+  color: #f5f5f5;
+}
+
+.footer-newsletter-input::placeholder {
+  color: #aaa;
+}
+
+.footer-newsletter-btn {
+  padding: 10px 16px;
+  background: #d61c22;
+  color: #fff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.footer-newsletter-btn:hover {
+  background: #b01519;
+}
+
+/* Footer Social Icons */
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+  color: #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.footer-social-btn:hover {
+  background: #d61c22;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* RTL footer — newsletter form */
+body.rtl .footer-newsletter {
+  flex-direction: row-reverse;
+}
+
+body.rtl .footer-newsletter-input {
+  border-radius: 0 6px 6px 0;
+  text-align: right;
+}
+
+body.rtl .footer-newsletter-btn {
+  border-radius: 6px 0 0 6px;
+}
+
+/* Footer 4-column equal layout */
+.footer .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer .row > [class*="col-"] {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+
+/* Footer Contact List */
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contact-list li i {
+  color: #d61c22;
+  font-size: 15px;
+  margin-top: 3px;
+  min-width: 16px;
+  flex-shrink: 0;
+}
+
+.footer-contact-list li span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+/* RTL footer — full alignment fix */
+
+/* Reverse column order without touching direction/text rendering */
+body.rtl .footer .row {
+  flex-direction: row-reverse;
+}
+
+/* Equal padding, right-aligned text only — no direction:rtl to avoid reversing numbers/text */
+body.rtl .footer .row > [class*="col-"] {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  text-align: right;
+}
+
+/* Contact list — icon moves to right side of text */
+body.rtl .footer-contact-list li {
+  
+}
+
+/* Quick links — arrow flips to right side */
+body.rtl .footer-quick-links li a {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+body.rtl .footer-quick-links li a i {
+  margin-right: 8px;
+  margin-left: 0;
+  transform: scaleX(-1);
+}
+
+/* Social icons — align to right */
+body.rtl .footer-social-links {
+  justify-content: flex-end;
+}
+
+/* Bottom footer — reverse order */
+body.rtl .end-footer .flex-sb-m {
+  flex-direction: row-reverse;
+}
+
+body.rtl .end-footer .txt17 {
+  padding-right: 0;
+  padding-left: 20px;
+  text-align: right;
+}
+
+/* Hero section — 360px fix */
+@media (max-width: 390px) {
+  .section-welcome.picnic-welcome-banner {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .picnic-welcome-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  .picnic-welcome-content .tit2 {
+    font-size: 18px;
+  }
+
+  .picnic-welcome-content .tit3,
+  .picnic-welcome-content h3 {
+    font-size: 24px !important;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .picnic-welcome-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .picnic-welcome-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .picnic-welcome-btns .btn3,
+  .picnic-welcome-btns .picnic-outline-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
+/* Footer newsletter — stack vertically at 1200px and below to prevent button clipping */
+@media (max-width: 1200px) {
+  .footer-newsletter {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-newsletter-input {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .footer-newsletter-btn {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  /* RTL same stacked layout */
+  body.rtl .footer-newsletter-input {
+    border-radius: 6px;
+    text-align: right;
+  }
+
+  body.rtl .footer-newsletter-btn {
+    border-radius: 6px;
+  }
 }
