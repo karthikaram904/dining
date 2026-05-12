@@ -2441,7 +2441,7 @@ body.dark .theme-btn {
 {
   color: #fff !important;
 }
-.reg-btn a:hover
+.reg-btn:hover a
 {
   color: #000 !important;
 }
