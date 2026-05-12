@@ -2336,7 +2336,7 @@ body.rtl .text-end {
 /* Theme toggle button */
 .theme-btn {
   background: transparent;
-  border: 2px solid currentColor;
+  border: 2px solid #d61c22;
   color: #102d47;
   width: 38px;
   height: 38px;
@@ -2424,10 +2424,18 @@ body.dark .theme-btn {
   color: #fff;
 }
 .reg-btn {
+  background: #d61c22;
+  border-radius: 15px;
+}
+.reg-btn:hover {
   background: #fff;
   border-radius: 15px;
 }
 .reg-btn a
+{
+  color: #fff !important;
+}
+.reg-btn a:hover
 {
   color: #000 !important;
 }
