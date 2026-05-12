@@ -572,10 +572,16 @@ input[type="date" i] {
 }
 
 .main_menu > li {
-  padding-top: 10px;  
-  padding-bottom: 10px; 
+  padding-top: 7px;  
+  padding-bottom: 8px; 
   margin-left: 10px;
   margin-right: 10px;
+}
+.btn-header {
+  margin-right: 0px !important;
+}
+.rtl .btn-header {
+  margin-left: 0px !important;
 }
 
 .main_menu > li > a {
